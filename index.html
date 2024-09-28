@@ -17,6 +17,11 @@
             height: 15vw;
             object-fit: cover;
         }
+
+        #buy-course >button {
+            font-size: 40px;
+            width: 400px;
+        }
     </style>
 </head>
 <body>
@@ -25,13 +30,13 @@
     <nav class="navbar border border-3 border-warning-subtle bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <b style="color: #e8e8e8;text-shadow: 2px 2px black;">Tio Meio Rico</b>
+                <h1 style="color: #e8e8e8;text-shadow: 2px 2px black;">Tio Meio Rico</h1>
             </a>
         </div>
     </nav>
 </header>
-<div class="container">
-    <h1>Sobre nós</h1>
+<div id="about" class="container mt-4">
+    <h2>Sobre nós</h2>
     <p>
         A Tio Meio Rico é uma plataforma de cursos online que promete transformar vidas por meio de ensinamentos
         inovadores e, por vezes, controversos. Fundada por um excêntrico empresário que se autodenomina "O Mentor das
@@ -56,8 +61,8 @@
         sejam um tanto, digamos, questionáveis.
     </p>
 </div>
-<div class="container">
-    <h1>Nossos cursos</h1>
+<div id="courses" class="container mt-4">
+    <h2>Nossos cursos</h2>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
             <div class="card">
@@ -100,7 +105,31 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div id="buy-course" class="container mt-4 d-flex justify-content-center">
+    <button type="button" class="btn btn-warning text-light btn-lg m-5" data-bs-toggle="modal"
+            data-bs-target="#buyCourseModal">Matricule-se aqui!
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="buyCourseModal" tabindex="-1" aria-labelledby="buyCourseModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="buyCourseModalLabel">Insira seus dados!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="container mt-4">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
             <span class="mb-3 mb-md-0 text-muted">© 2024 Tio Meio Rico, Inc</span>
@@ -113,7 +142,6 @@
         </ul>
     </footer>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
