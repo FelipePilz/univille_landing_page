@@ -18,7 +18,7 @@
             object-fit: cover;
         }
 
-        #buy-course >button {
+        #buy-course > button {
             font-size: 40px;
             width: 400px;
         }
@@ -107,10 +107,9 @@
 </div>
 <div id="buy-course" class="container mt-4 d-flex justify-content-center">
     <button type="button" class="btn btn-warning text-light btn-lg m-5" data-bs-toggle="modal"
-            data-bs-target="#buyCourseModal">Matricule-se aqui!
+            data-bs-target="#buyCourseModal">Compre o seu curso!
     </button>
 
-    <!-- Modal -->
     <div class="modal fade" id="buyCourseModal" tabindex="-1" aria-labelledby="buyCourseModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -119,11 +118,111 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form>
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div>
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div>
+                                <label for="surname" class="form-label">Sobrenome</label>
+                                <input type="text" class="form-control" id="surname" required>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="age" class="form-label">Idade</label>
+                                <input type="number" class="form-control" id="age" min="0" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Enviar promoções para este
+                                e-mail?</label>
+                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div>
+                                <label for="address" class="form-label">Endereço completo</label>
+                                <input type="text" class="form-control" id="address" placeholder="Rua dos Bobos, nº 0"
+                                       required>
+                            </div>
+
+                            <div>
+                                <label for="cep" class="form-label">CEP</label>
+                                <input type="text" class="form-control" id="cep" required>
+                            </div>
+                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div>
+                                <label for="state" class="form-label">Estado</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="" disabled selected>Selecione um estado</option>
+                                    <option value="sc">Santa Catarina</option>
+                                    <option value="rj">Rio de Janeiro</option>
+                                    <option value="sp">São Paulo</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="country" class="form-label">País</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="" disabled selected>Selecione um país</option>
+                                    <option value="br">Brasil</option>
+                                    <option value="ar">Argentina</option>
+                                    <option value="pt">Portugal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <label for="phone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="(00) 0000-0000" required>
+                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div>
+                                <label for="username" class="form-label">Usuário</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+
+                            <div>
+                                <label for="password" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="course" class="form-label">Curso</label>
+                            <select class="form-select" id="course" required>
+                                <option value="" disabled selected>Selecione um curso</option>
+                                <option value="enganarTrouxa">Como enganar trouxas</option>
+                                <option value="programar30seg">Programador em 30 segundos</option>
+                                <option value="virarCouch">Passos para virar o melhor coach</option>
+                                <option value="jogoTigrinho">Ganhar dinheiro com jogo do tigrinho</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="paymentMethod" class="form-label">Forma de pagamento</label>
+                            <select class="form-select" id="paymentMethod" required>
+                                <option value="" disabled selected>Selecione uma forma de pagamento</option>
+                                <option value="cartao">Cartão de Crédito</option>
+                                <option value="boleto">Boleto Bancário</option>
+                                <option value="pix">PIX</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-warning">Registrar</button>
+                    <button type="submit" class="btn btn-warning text-light" data-bs-dismiss="modal">Registrar</button>
                 </div>
             </div>
         </div>
